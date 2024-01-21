@@ -39,7 +39,7 @@ function Nav() {
       
 
       {/* Mobile Menu Button */}
-      <div className='flex items-center px-10 cursor-pointer lg:hidden'>
+      <div className='flex items-center px-10 cursor-pointer lg:hidden z-1'>
         <button type='button' onClick={handleMenu} className='z-10'>
           <span className='sr-only'>Open main menu</span>
           {open ? <FaTimes className='w-8 h-8' /> : <FaBars className='w-8 h-8'/>}
@@ -48,7 +48,7 @@ function Nav() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className='absolute top-0 left-0 mt-44 bg-white w-full lg:hidden'>
+        <div className='absolute top-0 left-0 mt-32 bg-white w-full lg:hidden z-0'>
           {navLinks.map((item, index) => (
             <a className='block transition-all duration-500 hover:bg-red-500 hover:text-white px-3 py-2 rounded-md text-base font-medium' key={index} href={item.link}>{item.title}</a>
           ))}

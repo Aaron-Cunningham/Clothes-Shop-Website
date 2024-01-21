@@ -8,20 +8,21 @@ function Hero() {
 
 
         <section className=''>
-            <div className='flex justify-evenly items-center bg-red-500 text-center p-7'>
+            <div className='flex justify-evenly items-center bg-red-500 text-center p-7 mb-1'>
                 <div className='hidden md:flex'>
-                    <button className='border-2 border-white text-white px-2 text-lg font-semibold active:scale-90 transition transform duration-100 ease-in-out w-[100px]'>WOMEN</button>
+                    <button className='border-2 border-white text-white px-2 text-lg font-semibold active:scale-90 transition transform duration-100 ease-in-out w-[100px] hover:opacity-80'>WOMEN</button>
                 </div>
                 <div className=''>
                     <p className='text-white font-semibold'>Do you want 15% off almost everything?* Use code: BEEPBEEP</p>
                 </div>
                 <div className='hidden md:flex'>
-                    <button className='border-2 border-white text-white px-2 text-lg font-semibold active:scale-90 transition transform duration-100 ease-in-out w-[100px]'>MEN</button>
+                    <button className='border-2 border-white text-white px-2 text-lg font-semibold active:scale-90 transition transform duration-100 ease-in-out w-[100px] hover:opacity-80'>MEN</button>
                 </div>
             </div>
+            
             <div className='md:max-w-[110rem] md:mx-auto md:px-1 '>
 
-                <div className='relative h-[500px] sm:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px]'>
+                <div className='relative h-[500px] sm:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px] -z-20'>
                     <img src="https://content.asos-media.com/-/media/homepages/unisex/homepages/2024/03-generic-hp/winter-generic-hp-1440x698.jpg" class="absolute w-full h-full object-cover"/>
 
                     <div className='flex flex-col absolute top-1/4 left-0 right-0 mt-3 items-center'>
