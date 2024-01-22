@@ -4,8 +4,8 @@ import MediumCard from './MediumCards';
 
 function AddCard() {
   return (
-    <section className='md:max-w-[110rem] md:mx-auto md:px-1'>
-      <div className='flex flex-col gap-1 sm:flex-row sm:gap-1 m-1'>
+    <section className='md:max-w-[85rem] md:mx-auto md:px-1'>
+      <div className='flex flex-col gap-1 sm:flex-row sm:gap-1 mt-1 '>
         {MediumCardsData.map(item => (
           <MediumCard
             key={item.id} 

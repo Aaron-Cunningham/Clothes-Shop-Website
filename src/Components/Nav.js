@@ -54,7 +54,7 @@ function Nav() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className='absolute top-0 left-0 mt-16 bg-white w-full lg:hidden z-0'>
+        <div className='absolute top-0 left-0 mt-14 bg-white w-full lg:hidden z-0'>
           {navLinks.map((item, index) => (
             <a className='block transition-all duration-500 hover:bg-red-500 hover:text-white px-3 py-2 rounded-md text-base font-medium' key={index} href={item.link}>{item.title}</a>
           ))}
