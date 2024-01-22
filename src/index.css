@@ -6,8 +6,8 @@
 .p {
     @apply bg-left-bottom 
       bg-gradient-to-r 
-      from-red-500 
-      to-red-500 
+      from-black
+      to-black 
       bg-[length:0%_2px] 
       bg-no-repeat 
       transition-all 
