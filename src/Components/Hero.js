@@ -8,32 +8,33 @@ function Hero() {
 
 
         <section className=''>
-            <div className='flex justify-evenly items-center bg-red-500 text-center p-7 mb-1'>
+            <div className='flex justify-evenly items-center bg-black text-center p-7 mb-1'>
                 <div className='hidden md:flex'>
-                    <button className='border-2 border-white text-white px-2 text-lg font-semibold active:scale-90 transition transform duration-100 ease-in-out w-[100px] hover:opacity-80'>WOMEN</button>
+                    <button className='border-2 border-white text-white px-2 text-lg font-semibold active:scale-90 transition transform duration-500 ease-out w-[100px] hover:opacity-80'>WOMEN</button>
                 </div>
                 <div className=''>
-                    <p className='text-white font-semibold'>Do you want 15% off almost everything?* Use code: BEEPBEEP</p>
+                    <p className='text-white font-semibold'>Do you want 15% off almost everything?* Use code: WINTERMOKI</p>
                 </div>
                 <div className='hidden md:flex'>
-                    <button className='border-2 border-white text-white px-2 text-lg font-semibold active:scale-90 transition transform duration-100 ease-in-out w-[100px] hover:opacity-80'>MEN</button>
+                    <button className='border-2 border-white text-white px-2 text-lg font-semibold active:scale-90 transition transform duration-500 ease-in-out w-[100px] hover:opacity-80'>MEN</button>
                 </div>
             </div>
             
             <div className='md:max-w-[110rem] md:mx-auto md:px-1 '>
 
-                <div className='relative h-[500px] sm:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px] -z-20'>
-                    <img src="https://content.asos-media.com/-/media/homepages/unisex/homepages/2024/03-generic-hp/winter-generic-hp-1440x698.jpg" class="absolute w-full h-full object-cover"/>
+                <div className='relative h-[500px] sm:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px] '>
+                    <img src="https://robbreport.com/wp-content/uploads/2021/04/todd-snyder-footjoy-1.jpg" class="absolute w-full h-full object-cover -z-20"/>
 
                     <div className='flex flex-col absolute top-1/4 left-0 right-0 mt-3 items-center'>
-                        <h1 className='text-red-400 text-5xl md:text-5xl lg:text-7xl font-bold mb-5'>This is beep</h1>
-                        <p className='bg-black text-white text-sm py-1  w-[210px] rounded-md md:w-[300px] md:text-lg text-center'>Beep design and 950+ brands</p>
+                        <h1 className='text-white text-5xl md:text-5xl lg:text-7xl font-bold mb-5'>This is MOKI</h1>
                         <div className='flex flex-col items-center justify-center mt-6 gap-7 text-2xl font-semibold md:flex-row'>
-                            <button className='bg-white py-2 w-[180px] justify-center rounded-md'>Shop Women</button>
-                            <button className='bg-white py-2 w-[180px] flex justify-center rounded-md'>Shop Men</button>
+                            <button className='bg-white py-2 w-[180px] justify-center hover:opacity-80 transition transform duration-100 ease-in-out'>Shop Women</button>
+                            <button className='bg-white py-2 w-[180px] flex justify-center hover:opacity-80 transition transform duration-100 ease-in-out'>Shop Men</button>
                         </div>
                     </div>
+                    
                 </div>
+                
 
             </div>
         </section>
