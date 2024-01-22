@@ -2,7 +2,7 @@ import React from 'react'
 
 function Tracking() {
   return (
-    <div>
+    <div className='mb-20'>
         <div className='flex justify-center bg-gray-100 py-4'>
             <h1 className='text-2xl font-bold'>TRACK YOUR ORDER</h1>
         </div>

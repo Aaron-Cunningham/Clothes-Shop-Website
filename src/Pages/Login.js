@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 function Login() {
   return (
-    <div className=' mb-20'>
+    <div className=' mb-10'>
         <div className='flex justify-center bg-gray-100 py-4'>
             <h1 className='text-2xl font-bold'>ACCOUNT</h1>
         </div>
-        <div className='flex justify-center items-center mt-[15rem]'>
-            <div className='w-[25rem] sm:w-[25rem]'>
+        <div className='flex justify-center items-center mt-[3rem] md:mt-[15rem]'>
+            <div className='w-[20rem] sm:w-[25rem]'>
                 <form className='w-full'>
                 <div className='mb-8'>
                     <input className='w-full border px-3 py-2 placeholder:text-gray-500 border-gray-400' placeholder='Email*'></input>
