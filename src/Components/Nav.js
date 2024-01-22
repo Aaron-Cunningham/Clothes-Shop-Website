@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { FaTimes, FaBars } from "react-icons/fa";
 import { MdOutlineShoppingBag } from "react-icons/md";
-import logo from './moki-logo.png';
+import logo from './Images/moki-logo.png';
 import { FiTruck } from "react-icons/fi";
 import { BsPerson } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 
 function Nav() {
@@ -18,13 +19,14 @@ function Nav() {
     { title: "Women", link: "/" },
     { title: "Jewelry", link: "/" },
   ];
-
   return (
     <header className='shadow-lg flex top-0 pt-2 pb-2'>
       <div className='lg:grid grid-cols-3 flex-grow'>
         <div className='flex items-center justify-start px-10'>
           {/* Logo */}
-          <img className='cursor-pointer h-[42px] w-[170px]' src={logo}/>
+          <Link to={'/'}>
+            <img className='cursor-pointer h-[42px] w-[170px]' src={logo}/>
+          </Link>
         </div>
 
         <div className='hidden lg:flex items-center text-xl justify-center '>
@@ -36,9 +38,15 @@ function Nav() {
 
         <div className='hidden lg:flex justify-end items-center space-x-5 pr-10'>
           {/* Desktop Buttons */}
-            <button className='hover:scale-110 transition transform active:scale-95 duration-200 ease-in-out'><FiTruck className='h-6 w-6'/></button>
-            <button className='hover:scale-110 transition transform active:scale-95 duration-200 ease-in-out'><BsPerson className='h-7 w-6'/></button>
-            <button className='hover:scale-110 transition transform active:scale-95 duration-200 ease-in-out'><MdOutlineShoppingBag className='h-6 w-6'/></button>
+            <Link to={'/tracking'}>
+              <button className='hover:scale-110 transition transform active:scale-95 duration-200 ease-in-out'><FiTruck className='h-6 w-6'/></button>
+            </Link>
+            <Link to='/login'>
+              <button className='hover:scale-110 transition transform active:scale-95 duration-200 ease-in-out'><BsPerson className='h-7 w-6'/></button>
+            </Link>
+            <Link to={'/basket'}>
+              <button className='hover:scale-110 transition transform active:scale-95 duration-200 ease-in-out'><MdOutlineShoppingBag className='h-6 w-6'/></button>
+            </Link>
         </div>
 
       </div>
