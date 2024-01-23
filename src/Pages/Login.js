@@ -1,8 +1,9 @@
 import Axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Login({ setLoggedIn }) {
+    const navigate = useNavigate()
     console.log("Login component rendered");
     const [usernameLog, setUsernameLog] = useState('');
     const [passwordLog, setPasswordLog] = useState('');
@@ -17,10 +18,10 @@ function Login({ setLoggedIn }) {
             if (response.data.message) {
                 // User entered wrong credentials
                 console.log("Login failed:", response.data.message);
-                setLoginStatus(response.data.message);
             } else {
                 // Correct credentials
                 setLoggedIn(true);
+                navigate('/')
             }
         });
     };
