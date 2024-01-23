@@ -3,20 +3,17 @@ import { Link } from 'react-router-dom'
 import Axios  from 'axios'
 
 function Register() {
-
-    
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [usernameReg, setUsernameReg] = useState('')
     const [passwordReg, setPasswordReg] = useState('')
-
     //Posting the username and password to be registered
     const register = () => {
         console.log("Working")
         Axios.post('http://localhost:3001/register', {
-            username: usernameReg, password:passwordReg, firstName: firstName, lastName:lastName
+            username: usernameReg, password:passwordReg, firstName: firstName, lastName:lastName,
         }).then(response =>{
-            console.log(response)
+            
         })
     }
 
