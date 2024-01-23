@@ -16,7 +16,7 @@ function AddCard() {
     };
 
     req.open("GET", "https://api.jsonbin.io/v3/b/65ae68d8dc746540189857a2/latest", true);
-    req.setRequestHeader("X-Master-Key", "$2a$10$F" + process.env.REACT_APP_API_KEY);
+    req.setRequestHeader("X-Master-Key", "$2a$10$F" + process.env.REACT_APP_PRIAVTE);
     req.send();
   }, []); 
 
