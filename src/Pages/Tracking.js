@@ -47,7 +47,7 @@ function Tracking() {
                             </div>
                             <div>
                                 <button className='bg-black text-white px-1 py-2 w-full transform transition-all hover:opacity-80 active:scale-95 ease-in-out'>ORDER TRACK BY #NUM</button>
-                        </div>
+                            </div>
                     </div>
                 </form>
             </div>
