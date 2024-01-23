@@ -1,25 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import MediumCard from './MediumCards';
+import { useBinData } from '../../useBinData';
 
 function AddCard() {
-  const [fetchedData, setFetchedData] = useState([]);
-
-  useEffect(() => {
-    let req = new XMLHttpRequest();
-    req.onreadystatechange = () => {
-      if (req.readyState === XMLHttpRequest.DONE) {
-        if (req.status === 200) {
-          const jsonResponse = JSON.parse(req.responseText);
-          setFetchedData(jsonResponse.record); 
-        }
-      }
-    };
-
-    req.open("GET", "https://api.jsonbin.io/v3/b/65ae68d8dc746540189857a2/latest", true);
-    req.setRequestHeader("X-Master-Key", "$2a$10$F" + process.env.REACT_APP_PRIAVTE);
-    req.send();
-  }, []); 
-
+  const fetchedData = useBinData('65ae68d8dc746540189857a2')
   return (
     <section className='md:max-w-[85rem] md:mx-auto md:px-1'>
       <div className='flex flex-col gap-1 sm:flex-row sm:gap-1 mt-1'>
