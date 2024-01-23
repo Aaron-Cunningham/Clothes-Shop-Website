@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaTimes, FaBars } from "react-icons/fa";
 import { MdOutlineShoppingBag } from "react-icons/md";
-import logo from './Images/moki-logo.png';
+import logo from '../Images/moki-logo.png';
 import { FiTruck } from "react-icons/fi";
 import { BsPerson } from "react-icons/bs";
 import { Link } from 'react-router-dom';
@@ -19,7 +19,7 @@ function Nav({loggedIn, setLoggedIn}) {
     { title: "Jewelry", link: "/" },
   ];
   return (
-    <header className='shadow-lg flex top-0 pt-2 pb-2 z-100'>
+    <header className='shadow-lg flex top-0 pt-2 pb-2 '>
       <div className='lg:grid grid-cols-3 flex-grow'>
         <div className='flex items-center justify-start px-10'>
           {/* Logo */}
@@ -81,7 +81,7 @@ function Nav({loggedIn, setLoggedIn}) {
       
 
       {/* Mobile Menu Button */}
-      <div className='flex items-center px-10 cursor-pointer lg:hidden z-10'>
+      <div className='flex items-center px-10 cursor-pointer lg:hidden'>
         <button type='button' onClick={handleMenu} className='z-10'>
           {open ? <FaTimes className='w-8 h-8' /> : <FaBars className='w-8 h-8'/>}
         </button>
@@ -89,7 +89,7 @@ function Nav({loggedIn, setLoggedIn}) {
 
       {/* Mobile Menu */}
       {open && (
-        <div className='absolute top-0 left-0 mt-14 bg-white w-full lg:hidden z-100000'>
+        <div className='absolute top-0 left-0 mt-14 bg-white w-full lg:hidden'>
           {navLinks.map((item, index) => (
             <a className='block transition-all duration-500 hover:bg-black hover:text-white px-3 py-2 rounded-md text-base font-medium' key={index} href={item.link} >{item.title} </a>
           ))}
