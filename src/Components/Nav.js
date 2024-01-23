@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaTimes, FaBars } from "react-icons/fa";
 import { MdOutlineShoppingBag } from "react-icons/md";
-import logo from '../Images/moki-logo.png';
+import logo from './moki-logo.png';
 import { FiTruck } from "react-icons/fi";
 import { BsPerson } from "react-icons/bs";
 import { Link } from 'react-router-dom';
