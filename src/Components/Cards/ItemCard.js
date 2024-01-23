@@ -12,7 +12,7 @@ function ItemCard(props) {
   return (
             <div className=''>
                 <div className=' cursor-pointer flex justify-center items-center hover:opacity-85 transition-opacity duration-00 transform ease-in-out'>
-                    <img className=' object-cover w-full' src={props.img} />
+                    <img className='w-full' src={props.img} />
                 </div>
                 <div>
                     <p>{props.title}</p>
