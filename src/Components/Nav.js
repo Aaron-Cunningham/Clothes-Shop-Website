@@ -25,11 +25,11 @@ function Nav({loggedIn, setLoggedIn}) {
         <div className='flex items-center justify-start px-10'>
           {/* Logo */}
           <Link to={'/'}>
-            <img className='cursor-pointer h-[42px] w-[170px]' src={logo}/>
+            <img alt={"company logo"} className='cursor-pointer h-[42px] w-[170px]' src={logo}/>
           </Link>
         </div>
 
-        <div className='hidden xl:flex items-center text-xl justify-center '>
+        <div className='hidden lg:flex items-center text-xl justify-evenly '>
           {/* Desktop Menu */}
           {navLinks.map((item, index) => (
             <Link to={'/'} className='a group active:scale-90 transition transform mx-16'><p className='p group-hover:p'>{item.title}</p></Link>
@@ -82,7 +82,7 @@ function Nav({loggedIn, setLoggedIn}) {
       
 
       {/* Mobile Menu Button */}
-      <div className='flex items-center px-10 cursor-pointer xl:hidden z-10'>
+      <div className='flex items-center px-10 cursor-pointer lg:hidden z-10'>
         <button type='button' onClick={handleMenu} className='z-10'>
           {open ? <FaTimes className='w-8 h-8' /> : <FaBars className='w-8 h-8'/>}
         </button>
@@ -95,26 +95,26 @@ function Nav({loggedIn, setLoggedIn}) {
             <a className='block transition-all duration-500 hover:bg-black hover:text-white px-3 py-2 rounded-md text-base font-medium' key={index} href={item.link} >{item.title} </a>
           ))}
 
-        <div className='block transition-all duration-500 hover:bg-red-500 hover:text-white px-3 py-2 rounded-md text-base font-medium'>
-          <Link to="tracking"><p>Tracking</p></Link>
+        <div className='block transition-all duration-500 hover:bg-black hover:text-white px-3 py-2 rounded-md text-base font-medium'>
+          <Link to="tracking"><button className='w-full text-left ' onClick={handleMenu}>Tracking</button></Link>
 
         </div>
-        <div className='block transition-all duration-500 hover:bg-red-500 hover:text-white px-3 py-2 rounded-md text-base font-medium cursor-pointer'>
-          <Link to="/basket"><p>Basket</p></Link>
+        <div className='block transition-all duration-500 hover:bg-black hover:text-white px-3 py-2 rounded-md text-base font-medium cursor-pointer'>
+          <Link to="/basket"><button className='w-full text-left ' onClick={handleMenu}>Basket</button></Link>
         </div>
-        <div className='block transition-all duration-500 hover:bg-black hover:text-white px-3 py-2 rounded-md text-base font-medium'>
-          {loggedIn && (
-            <Link to="/account"><p>Account</p></Link>
-          )}
+        <div className='block transition-all duration-500  hover:text-white px-3 py-2 rounded-md text-base font-medium'>
+          {loggedIn ? (
+            <Link to="/account"><button className='w-full text-left hover:bg-black' onClick={handleMenu}>Account</button></Link>
+          ) : (<div></div>)}
         </div>
         {loggedIn ? (
-          <div className='block transition-all duration-500 hover:bg-red-500 hover:text-white px-3 py-2 rounded-md text-base font-medium cursor-pointer'>
+          <div className='block transition-all duration-500 hover:bg-black hover:text-white px-3 py-2 rounded-md text-base font-medium cursor-pointer'>
             <Link to="/" onClick={(e) => {setLoggedIn(false)}}><p>Logout</p></Link>
           </div>
 
         ) : ( 
           <div className='block transition-all duration-500 hover:bg-black hover:text-white px-3 py-2 rounded-md text-base font-medium'>
-            <Link to="/login"><p>Login</p></Link>
+            <Link to="/login"><button className='w-full text-left ' onClick={handleMenu}>Login</button></Link>
           </div>)}
         </div>
       )}
