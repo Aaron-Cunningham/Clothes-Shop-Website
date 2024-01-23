@@ -21,7 +21,7 @@ function Hero() {
                 <div className=' h-[500px] sm:h-[400px] lg:h-[500px] xl:h-[600px] xxl:h-[700px] '>
                     <img alt={"Cover photo"} src="https://robbreport.com/wp-content/uploads/2021/04/todd-snyder-footjoy-1.jpg" class="w-full h-full object-cover"/>
 
-                    <div className='flex flex-col absolute top-1/4 left-0 right-0 mt-32 xl:mt-24 items-center'>
+                    <div className='flex flex-col mt-14 absolute top-1/4 left-0 right-0  xl:mt-14 items-center'>
                         <h1 className='text-white text-6xl lg:text-7xl font-bold mb-5'>This is MOKI</h1>
                         <div className='flex flex-col items-center justify-center mt-6 gap-7 text-2xl font-semibold sm:flex-row'>
                             <button className='bg-white py-2 w-[180px] justify-center hover:opacity-80 transition-all transform duration-300 ease-in-out'>Shop Women</button>
