@@ -10,7 +10,7 @@ export function useBinData(binId) {
       try {
         const response = await fetch(`https://api.jsonbin.io/v3/b/${binId}/latest`, {
           headers: {
-            'X-Master-Key': `$2a$10$F${process.env.REACT_APP_PRIAVTE}`,
+            'X-Master-Key': "$2a$10$F" + process.env.REACT_APP_PRIAVTE
           },
         });
 
