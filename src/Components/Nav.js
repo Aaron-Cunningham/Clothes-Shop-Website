@@ -12,11 +12,10 @@ function Nav({loggedIn, setLoggedIn}) {
   const handleMenu = () => {
     setOpen(prev => !prev);
   }
-
   const navLinks = [
     { title: "Shop", link: "/" },
-    { title: "Men", link: "/" },
-    { title: "Women", link: "/" },
+    { title: "Men", link: "/mens" },
+    { title: "Women", link: "/women" },
     { title: "Jewelry", link: "/" },
   ];
   return (
@@ -25,14 +24,14 @@ function Nav({loggedIn, setLoggedIn}) {
         <div className='flex items-center justify-start px-10'>
           {/* Logo */}
           <Link to={'/'}>
-            <img alt={"company logo"} className='cursor-pointer h-[42px] w-[170px]' src={logo}/>
+            <img className='cursor-pointer h-[42px] w-[170px]' src={logo}/>
           </Link>
         </div>
 
         <div className='hidden lg:flex items-center text-xl justify-evenly '>
           {/* Desktop Menu */}
           {navLinks.map((item, index) => (
-            <Link to={'/'} className='a group active:scale-90 transition transform mx-16'><p className='p group-hover:p'>{item.title}</p></Link>
+            <Link to={item.link} className='a group active:scale-90 transition transform mx-16'><p className='p group-hover:p'>{item.title}</p></Link>
           ))}
         </div>
         
