@@ -12,6 +12,7 @@ import Axios from 'axios';
 import Account from './Pages/Account';
 import MensShop from './Pages/MensShop';
 import WomensShop from './Pages/WomensShop';
+import Basket from './Pages/Basket';
 
 // progress bar
 const progress = new ProgressBar({
@@ -64,6 +65,7 @@ function App() {
           <Route path='/account' element={<Account />}/>
           <Route path='/mens' element={<MensShop/>}/>
           <Route path='/women' element={<WomensShop/>}/>
+          <Route path='/basket' element={<Basket/>}/>
         </Routes>
         </div>
         <div className='sticky top-[100vh]'>
