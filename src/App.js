@@ -10,7 +10,10 @@ import Register from './Pages/Register';
 import Footer from './Components/Footer';
 import Axios from 'axios';
 import Account from './Pages/Account';
+import MensShop from './Pages/MensShop';
+import WomensShop from './Pages/WomensShop';
 
+// progress bar
 const progress = new ProgressBar({
   size: 5,
   color: "black",
@@ -18,9 +21,9 @@ const progress = new ProgressBar({
   delay: 10
 });
 
+// progress bar
 function RouteChangeTracker() {
   const location = useLocation();
-
   useEffect(() => {
     progress.start();
     setTimeout(() => {
@@ -33,9 +36,6 @@ function RouteChangeTracker() {
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
-  //Session
-  Axios.defaults.withCredentials = true;
-
 
   useEffect(() => {
     Axios.defaults.withCredentials = true;
@@ -62,6 +62,8 @@ function App() {
           <Route path='/tracking' element={<Tracking />}/>
           <Route path='/register' element={loggedIn ? <Navigate to={"/account"}/> : <Register />}/>
           <Route path='/account' element={<Account />}/>
+          <Route path='/mens' element={<MensShop/>}/>
+          <Route path='/women' element={<WomensShop/>}/>
         </Routes>
         </div>
         <div className='sticky top-[100vh]'>
