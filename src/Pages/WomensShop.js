@@ -5,8 +5,10 @@ import { womensBannerImg } from '../data';
 import BannerCard from '../Components/Cards/BannerCard';
 
 function WomensShop() {
-    const fetchedData = useBinData('65afffeadc74654018995f8c')
-
+    const {fetchedData, isLoading} = useBinData('65afffeadc74654018995f8c')
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
 
     const cards = fetchedData.map((item, index) => (
         <ItemCard

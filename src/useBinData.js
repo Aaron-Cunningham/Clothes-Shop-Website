@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react';
 
 
 export function useBinData(binId) {
-  
+
   const [fetchedData, setFetchedData] = useState([]);
-  
+  const [isLoading, setIsLoading] = useState(true)
+
   useEffect(() => {
     const fetchData = async () => {
+
       try {
         const response = await fetch(`https://api.jsonbin.io/v3/b/${binId}/latest`, {
           headers: {
@@ -22,11 +24,14 @@ export function useBinData(binId) {
         }
       } catch (error) {
         console.error('Error fetching data:', error);
+      }finally {
+        setIsLoading(false)
       }
     };
+
 
     fetchData();
   }, [binId]);
 
-  return fetchedData;
+  return {fetchedData, isLoading};
 }

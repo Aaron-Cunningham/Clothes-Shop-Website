@@ -6,8 +6,10 @@ import BannerCard from '../Components/Cards/BannerCard';
 import { mensBannerImg } from '../data';
 
 function MensShop() {
-    const fetchedData = useBinData('65aff84d266cfc3fde7ed801')
-
+    const {fetchedData, isLoading} = useBinData('65aff84d266cfc3fde7ed801')
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
 
     const cards = fetchedData.map((item, index) => (
         <ItemCard
